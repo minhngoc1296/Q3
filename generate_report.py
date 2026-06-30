@@ -463,7 +463,122 @@ pdf.multi_cell(0, 4, 'Analysis performed with Python (FirthLogit custom implemen
                '(Jeffreys prior penalty). Bootstrap = 1000 iterations, percentile CI. '
                'ROC and calibration using manual implementations.')
 
+# ===================== APPENDIX: OR CALCULATION =====================
+pdf.add_page()
+pdf.section_title('Appendix: Calculation of Odds Ratios (OR)')
+pdf.ln(1)
+
+# A. Univariate
+pdf.subsection_title('A. Table 2 — Univariate Analysis (Crude OR)')
+pdf.body_text(
+    'Each variable is analyzed independently using Firth penalized logistic regression:\n'
+    '  logit(P) = beta0 + beta_i * X_i\n'
+    'The odds ratio is OR_i = exp(beta_i).\n'
+    '95% confidence interval: exp(beta_i ± 1.96 * SE_beta).'
+)
+pdf.body_text(
+    'Example — BRAF V600E:\n'
+    '  beta = 0.181, SE = 0.747\n'
+    '  OR = exp(0.181) = 1.199 (95% CI: 0.278 - 5.176, p = 0.81)\n'
+    'Interpretation: "Patients with BRAF V600E have 1.2 times the odds of recurrence '
+    'compared to wild-type patients, but this difference is not statistically significant (p = 0.81)."\n'
+    'This is a crude (unadjusted) OR — it reflects the total association between BRAF and recurrence, '
+    'including indirect effects through other correlated variables (e.g., N+ status).'
+)
+
+# B. Multivariate
+pdf.subsection_title('B. Table 4 — Multivariate Analysis (Adjusted OR)')
+pdf.body_text(
+    'Multiple predictors in a single Firth model:\n'
+    '  logit(P) = beta0 + beta1*X1 + beta2*X2 + ... + betak*Xk\n'
+    'OR_i = exp(beta_i) represents the independent effect of X_i holding all other variables constant.'
+)
+pdf.body_text(
+    'Example — Model 5 (N+ + BRAF + TERT):\n'
+    '  logit(P) = -3.442 + 1.486*N+ + (-0.122)*BRAF + (-0.059)*TERT\n\n'
+    '  OR(N+) = exp(1.486) = 4.418\n'
+    '    Holding BRAF and TERT constant, N+ increases recurrence odds 4.4-fold.\n\n'
+    '  OR(BRAF) = exp(-0.122) = 0.885\n'
+    '    Holding N+ and TERT constant, BRAF V600E decreases odds by 11.5%.\n'
+    '    Compare with crude OR = 1.20 (Table 2). Why the change? BRAF V600E is correlated with N+.\n'
+    '    Crude OR = total effect (BRAF + indirect via N+). Adjusted OR = direct effect of BRAF alone.\n'
+    '    This is an example of confounding adjustment — and mild Simpson\'s paradox.\n\n'
+    '  OR(TERT) = exp(-0.059) = 0.943\n'
+    '    Holding N+ and BRAF constant, TERT has minimal effect.'
+)
+pdf.body_text(
+    'Why OR changes between univariate and multivariate:\n'
+    '  Crude OR (1.20) = BRAF effect + "BRAF correlates with N+ so part of N+ effect leaks into BRAF"\n'
+    '  Adjusted OR (0.89) = BRAF effect alone, after removing the N+ contribution\n'
+    '  This happens because BRAF+ patients have a different N+ rate than BRAF- patients.\n'
+    '  The adjusted OR is more accurate for causal inference.'
+)
+
+# C. Fisher
+pdf.subsection_title('C. Table 3 — Gene-Gene Interaction (Fisher Exact Test)')
+pdf.body_text(
+    'For binary gene pairs, a 2×2 contingency table is constructed:\n\n'
+    '               Gene2+    Gene2-\n'
+    '  Gene1+         a         b\n'
+    '  Gene1-         c         d\n\n'
+    '  OR = (a × d) / (b × c)\n'
+    '  Fisher\'s exact test is used (no normal approximation, valid for small counts).'
+)
+pdf.body_text(
+    'Example — BRAF V600E vs TERT:\n'
+    '               TERT+    TERT-\n'
+    '  BRAF+          2       43\n'
+    '  BRAF-          4       65\n\n'
+    '  OR = (2 × 65) / (43 × 4) = 130 / 172 = 0.756\n'
+    '  Interpretation: OR < 1 suggests mutual exclusivity (BRAF+ and TERT+ tend not to co-occur).\n'
+    '  However, p = 1.000 — no significant association.\n\n'
+    '  TERT vs TP53: OR = 21.4 (p = 0.103) — hints at co-occurrence but only 1 co-positive case.'
+)
+
+# D. Firth vs MLE
+pdf.subsection_title('D. Comparison: Firth vs Standard MLE')
+pdf.body_text(
+    'Standard MLE logistic regression maximizes the log-likelihood:\n'
+    '  LL(beta) = Sigma[ yi * log(pi) + (1-yi) * log(1-pi) ]\n\n'
+    'Firth adds Jeffreys prior penalty (0.5 * log|I(beta)|):\n'
+    '  LL*(beta) = LL(beta) + 0.5 * log(det(I(beta)))\n'
+    '  where I(beta) = Fisher information matrix\n\n'
+    'This penalty shrinks beta estimates toward zero (OR toward 1.0), guaranteeing finite '
+    'estimates even with complete separation (a variable perfectly predicts the outcome).'
+)
+pdf.body_text(
+    'Results from Sensitivity Analysis (SA3) — Model 5:\n\n'
+    '  Variable     Firth OR     MLE OR      Ratio (Firth/MLE)\n'
+    '  Intercept    0.032        0.021       1.565\n'
+    '  N+           4.418        6.369       0.694\n'
+    '  BRAF V600E   0.885        0.828       1.069\n'
+    '  TERT         0.943        0.000       --\n\n'
+    'Key observation: MLE gives TERT OR = 0.000 (effectively infinite — complete separation '
+    'because 0/6 TERT+ patients had recurrence). Firth gives TERT OR = 0.943 (finite and interpretable).\n\n'
+    'Firth is the appropriate method for this study due to:\n'
+    '  1. Rare mutations: TERT (6/114 = 5.3%), TP53 (2/114 = 1.8%)\n'
+    '  2. Low event count: 7/114 (6.1%) — leads to quasi-complete separation\n'
+    '  3. Firth guarantees convergence where MLE fails'
+)
+
+# Summary footnotes note
+pdf.ln(2)
+pdf.set_draw_color(0, 51, 102)
+pdf.set_line_width(0.5)
+pdf.line(10, pdf.get_y(), 200, pdf.get_y())
+pdf.ln(2)
+pdf.set_font('ArialUni', 'I', 7.5)
+pdf.set_text_color(100, 100, 100)
+pdf.multi_cell(0, 4, 'Abbreviations: OR = Odds Ratio; CI = Confidence Interval; Firth = Firth penalized logistic regression; '
+               'MLE = Maximum Likelihood Estimation; SE = Standard Error. All calculations performed in Python 3.14 '
+               'using custom FirthLogit implementation with scipy.optimize and numpy.')
+
 output_path = OUTPUT
+if os.path.exists(output_path):
+    try:
+        os.remove(output_path)
+    except:
+        pass
 pdf.output(output_path)
 print(f'PDF saved to: {output_path}')
 print(f'File size: {os.path.getsize(output_path)} bytes')
