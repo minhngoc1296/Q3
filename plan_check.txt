@@ -1,0 +1,295 @@
+=== Phan loai T ===
+Phân loại T
+1      64
+3      19
+2       9
+x       5
+4       4
+3b      4
+1b      4
+1       1
+4a      1
+NaN     1
+0       1
+2       1
+Name: count, dtype: int64
+
+=== Giai doan ===
+Giai đoạn
+I      92
+II     14
+NaN     4
+III     3
+IVb     1
+Name: count, dtype: int64
+
+=== Phan loai M ===
+Phân loại M
+0.0    113
+NaN      1
+Name: count, dtype: int64
+
+=== The mo benh hoc u ===
+Thể mô bệnh học u
+Ung thư thể nhú                              73
+NaN                                          40
+Ung thư thể nhú , dưới type biến thể nang     1
+Name: count, dtype: int64
+
+=== Phan loai N ===
+Phân loại N
+0      54
+1      45
+1b      7
+1a      6
+NaN     1
+2       1
+Name: count, dtype: int64
+
+=== Ngày tiến hành khảo sát (ngay trước cắt tuyến giáp) ===
+Ngày tiến hành khảo sát (ngay trước cắt tuyến giáp)
+2024-10-09    42
+2024-08-13    25
+2024-10-08    16
+2024-08-14     8
+2024-08-15     8
+2024-08-19     5
+2024-12-08     2
+2024-08-12     2
+2024-08-16     2
+2024-09-27     1
+2024-08-17     1
+2022-08-13     1
+2024-08-18     1
+Name: count, dtype: int64
+
+=== 7.TS bệnh lý về tuyến giáp (trước khi được chẩn đoán ung thư tuyến giáp, nếu có): ===
+7.TS bệnh lý về tuyến giáp (trước khi được chẩn đoán ung thư tuyến giáp, nếu có):
+Không có bệnh lý tuyến giáp trước chẩn đoán ung thư    102
+NaN                                                      4
+Bướu giáp lành tính                                      2
+Basedow                                                  1
+Basedow , 2019                                           1
+Nhân tuyến giáp cách 2 năm                               1
+Nhân TG, FNA(+)                                          1
+Viêm tuyến giáp mạn tính Hashimoto                       1
+Bướu giáp lành tính , Basedow                            1
+Name: count, dtype: int64
+
+=== 13. Năm chẩn đoán di căn (nếu có) ===
+13. Năm chẩn đoán di căn (nếu có)
+NaN       109
+2023.0      3
+2022.0      2
+Name: count, dtype: int64
+
+=== 14. Cơ quan di căn (nếu có) ===
+14. Cơ quan di căn (nếu có)
+NaN              106
+Tái phát hạch      4
+Tái phát           3
+tái phát hạch      1
+Name: count, dtype: int64
+
+=== Phẫu thuật cắt tuyến giáp ===
+Phẫu thuật cắt tuyến giáp
+True     80
+False    34
+Name: count, dtype: int64
+
+=== Thể mô bệnh học u ===
+Thể mô bệnh học u
+Ung thư thể nhú                              73
+NaN                                          40
+Ung thư thể nhú , dưới type biến thể nang     1
+Name: count, dtype: int64
+
+=== Mô bệnh học của hạch ===
+Mô bệnh học của hạch
+NaN                                                            77
+Hạch trung tâm                                                 23
+Hạch trung tâm , Hạch cổ bên cùng bên , Hạch cổ bên đối bên     6
+Hạch cổ bên cùng bên , Hạch cổ bên đối bên                      3
+Hạch trung tâm , Hạch cổ bên cùng bên                           2
+Hạch cổ bên cùng bên                                            2
+Hạch cổ trung tâm                                               1
+Name: count, dtype: int64
+
+=== Số hạch di căn (trung tâm) ===
+Số hạch di căn (trung tâm)
+NaN     51
+0.0     38
+1.0      9
+4.0      5
+5.0      3
+7.0      2
+2.0      2
+3.0      2
+15.0     1
+11.0     1
+Name: count, dtype: int64
+
+=== Số hạch di căn (cùng bên) ===
+Số hạch di căn (cùng bên)
+0.0     54
+NaN     49
+1.0      5
+2.0      2
+7.0      1
+3.0      1
+4.0      1
+10.0     1
+Name: count, dtype: int64
+
+=== Số hạch di căn (đối bên) ===
+Số hạch di căn (đối bên)
+0.0     61
+NaN     49
+2.0      1
+1.0      1
+5.0      1
+11.0     1
+Name: count, dtype: int64
+
+=== Tuyến giáp ===
+Tuyến giáp
+NaN    65
+0      48
+IA      1
+Name: count, dtype: int64
+
+=== Nhân tuyến giáp ===
+Nhân tuyến giáp
+NaN    114
+Name: count, dtype: int64
+
+=== Số lượng ===
+Số lượng
+NaN    97
+0.0    10
+2.0     4
+1.0     3
+Name: count, dtype: int64
+
+=== Vị trí ===
+Vị trí
+NaN                      108
+Thùy trái , Thùy phải      3
+Thùy phải                  2
+Thùy trái                  1
+Name: count, dtype: int64
+
+=== Siêu âm (0 = k có tuyến giáp) trc pt ===
+Siêu âm (0 = k có tuyến giáp) trc pt
+NaN    113
+0.0      1
+Name: count, dtype: int64
+
+=== Vị trí nhân trc pt ===
+Vị trí nhân trc pt
+NaN    71
+T P    27
+T       6
+P       5
+TP      3
+T,P     1
+1       1
+Name: count, dtype: int64
+
+=== Siêu âm (0 = k có tuyến giáp) sau pt ===
+Siêu âm (0 = k có tuyến giáp) sau pt
+0                        65
+NaN                      47
+Còn tổ chức hố giáp P     1
+Còn tổ chức hố giáp T     1
+Name: count, dtype: int64
+
+=== Xạ hình tuyến giáp ===
+Xạ hình tuyến giáp
+NaN                                                                           111
+K giáp sau PT, còn ít tổ chức lan tỏa                                           1
+Không tăng hoạt tính phóng xạ tại giường tuyến giáp, phổi và phần mềm           1
+K giáp đã phẫu thuật còn một phần tổ chức -5,7kg( Chụp xạ hình 7 mG Tc99m)      1
+Name: count, dtype: int64
+
+=== Phân loại T ===
+Phân loại T
+1      64
+3      19
+2       9
+x       5
+4       4
+3b      4
+1b      4
+1       1
+4a      1
+NaN     1
+0       1
+2       1
+Name: count, dtype: int64
+
+=== Phân loại N ===
+Phân loại N
+0      54
+1      45
+1b      7
+1a      6
+NaN     1
+2       1
+Name: count, dtype: int64
+
+=== Phân loại M ===
+Phân loại M
+0.0    113
+NaN      1
+Name: count, dtype: int64
+
+=== Giai đoạn ===
+Giai đoạn
+I      92
+II     14
+NaN     4
+III     3
+IVb     1
+Name: count, dtype: int64
+
+=== Cắt tuyến giáp (chính) ===
+Cắt tuyến giáp (chính)
+False    73
+True     41
+Name: count, dtype: int64
+
+=== Số hạch di căn (trung tâm).1 ===
+Số hạch di căn (trung tâm).1
+NaN     75
+0.0     19
+1.0      5
+5.0      4
+2.0      4
+6.0      1
+13.0     1
+14.0     1
+3.0      1
+8.0      1
+4.0      1
+15.0     1
+Name: count, dtype: int64
+
+=== Số hạch di căn (cùng bên).1 ===
+Số hạch di căn (cùng bên).1
+NaN    75
+0.0    29
+4.0     4
+1.0     2
+2.0     2
+5.0     1
+3.0     1
+Name: count, dtype: int64
+
+=== Số hạch di căn (đối bên).1 ===
+Số hạch di căn (đối bên).1
+NaN    75
+0.0    38
+1.0     1
+Name: count, dtype: int64
+

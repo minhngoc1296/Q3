@@ -1,0 +1,183 @@
+=== Tổng số nhân trc pt ===
+Tổng số nhân trc pt
+NaN    70
+2      22
+1      10
+4       3
++       2
+3       2
+6       2
+0       1
+5       1
+7       1
+Name: count, dtype: int64
+
+=== Vị trí nhân trc pt ===
+Vị trí nhân trc pt
+NaN    71
+T P    27
+T       6
+P       5
+TP      3
+T,P     1
+1       1
+Name: count, dtype: int64
+
+=== FNA ===
+FNA
+NaN    79
+VI     24
+V       8
+II      2
+IV      1
+Name: count, dtype: int64
+
+=== PP Xét nghiệm gen trước điều trị ===
+PP Xét nghiệm gen trước điều trị
+qPCR     84
+strip    28
+NaN       2
+Name: count, dtype: int64
+
+=== I-131 (chính) ===
+I-131 (chính)
+True     101
+False     13
+Name: count, dtype: int64
+
+=== F. Phương pháp điều trị chính ===
+F. Phương pháp điều trị chính
+NaN    114
+Name: count, dtype: int64
+
+=== Cắt tuyến giáp (chính) ===
+Cắt tuyến giáp (chính)
+False    73
+True     41
+Name: count, dtype: int64
+
+Merged shape: (114, 169)
+=== BRAF R682Q ===
+BRAF R682Q
+0    113
+2      1
+Name: count, dtype: int64
+
+=== BRAF A404fs ===
+BRAF A404fs
+0    113
+2      1
+Name: count, dtype: int64
+
+=== BRAFV600E ===
+BRAFV600E
+0    69
+2    45
+Name: count, dtype: int64
+
+=== BRAF ===
+BRAF
+0    67
+2    47
+Name: count, dtype: int64
+
+=== TERT R756C ===
+TERT R756C
+0    114
+Name: count, dtype: int64
+
+=== TERT T567M ===
+TERT T567M
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT R577Q ===
+TERT R577Q
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT D685N ===
+TERT D685N
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT R938Q ===
+TERT R938Q
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT D516N ===
+TERT D516N
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT V272M ===
+TERT V272M
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT P438H ===
+TERT P438H
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT T1111M ===
+TERT T1111M
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TERT ===
+TERT
+0    108
+2      6
+Name: count, dtype: int64
+
+=== TP53:c.559+1G>A ===
+TP53:c.559+1G>A
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TP53:c.96+1G>A ===
+TP53:c.96+1G>A
+0    113
+2      1
+Name: count, dtype: int64
+
+=== TP53 ===
+TP53
+0    112
+2      2
+Name: count, dtype: int64
+
+=== Sample rows with genetic data ===
+    Mã bệnh nhân  Kết quả XN gen (0: bt, 1: V600E)  BRAFV600E  BRAF  TERT  TP53
+0      220027644                               1.0          0     0     0     0
+1      220025423                               1.0          2     2     0     0
+2      220037060                               1.0          0     0     2     2
+3      220042601                               1.0          0     0     0     2
+4      220041481                               0.0          0     0     0     0
+5      230042037                               1.0          2     2     0     0
+6      230025245                               1.0          2     2     0     0
+7      230042190                               1.0          2     2     0     0
+8      220038237                               1.0          2     2     0     0
+9      230010141                               1.0          2     2     0     0
+10     230017761                               1.0          0     0     0     0
+11     230039674                               0.0          0     0     0     0
+12     220029841                               1.0          0     0     0     0
+13     220024215                               1.0          2     2     2     0
+14     220029426                               1.0          0     0     0     0
+15     230051917                               1.0          2     2     0     0
+16     230024791                               1.0          0     0     0     0
+17     230010324                               NaN          0     0     0     0
+18     220036232                               1.0          0     0     0     0
+19     230040466                               1.0          0     2     2     0
+

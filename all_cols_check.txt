@@ -1,0 +1,32 @@
+Phẫu thuật cắt tuyến giáp:
+Phẫu thuật cắt tuyến giáp
+True     80
+False    34
+Name: count, dtype: int64
+
+18. Triệu chứng toàn thân và triệu chứng cơ năng:
+18. Triệu chứng toàn thân và triệu chứng cơ năng
+NaN                        98
+Nuốt nghẹn                  8
+Nuốt nghẹn , Khàn tiếng     3
+Nuốt nghẹn , Khó thở        2
+Khàn tiếng                  2
+Khó thở                     1
+Name: count, dtype: int64
+
+Triệu chứng khác (ghi rõ):
+Triệu chứng khác (ghi rõ)
+NaN                            112
+Co rút đầu ngón tay hai bên      1
+Mệt mỏi, gầy sút cân             1
+Name: count, dtype: int64
+
+Xét nghiệm: Phát hiện bất thường sau phẫu thuật (tháng):
+Xét nghiệm: Phát hiện bất thường sau phẫu thuật (tháng)
+NaN        62
+Không      36
+không      14
+missing     1
+20          1
+Name: count, dtype: int64
+

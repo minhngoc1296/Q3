@@ -1,0 +1,120 @@
+======================================================================
+  SENSITIVITY ANALYSIS
+  Thyroid Cancer Recurrence — Firth Logistic
+======================================================================
+
+Total patients: 114
+
+======================================================================
+  SA1: STRICTER RECURRENCE DEFINITION (>=2 criteria)
+======================================================================
+  Strict recurrence (>=2 criteria): 3/114 (2.6%)
+  Original recurrence: 7/114 (6.1%)
+
+Variable                       N      Events   OR           95% CI                    p-value     
+---------------------------------------------------------------------------------------------
+Gender (Male)                  114    3        0.461        0.022 - 9.704             0.6183      
+Age >=55 years                 114    3        1.293        0.161 - 10.410            0.8092      
+Multifocal                     114    3        1.603        0.198 - 12.989            0.6583      
+Bilateral                      114    3        1.533        0.190 - 12.404            0.6886      
+Tumor size >1cm                114    3        2.678        0.323 - 22.209            0.3614      
+T stage T3+                    114    3        1.844        0.226 - 15.011            0.5675      
+LN metastasis (N+)             114    3        6.876        0.338 - 139.930           0.2098      
+Central LN >=5                 114    3        11.207       1.330 - 94.399            0.0262      
+Lateral LN (+)                 114    3        2.678        0.323 - 22.209            0.3614      
+BRAF V600E                     114    3        11.447       0.564 - 232.421           0.1125      
+TERT promoter                  114    3        2.319        0.087 - 61.991            0.6159      
+TP53                           114    3        6.257        0.131 - 299.814           0.3530      
+Any mutation                   114    3        9.165        0.451 - 186.131           0.1493      
+Co-mutation                    114    3        3.413        0.110 - 106.140           0.4840      
+
+======================================================================
+  SA2: AGE SUBGROUP ANALYSIS
+======================================================================
+
+  Age <=55 (N=80, events=5):
+    Gender (Male)                  80    5     1.036      0.146 - 7.371          0.9718    
+    Age >=55 years                 80    5     2.673      0.059 - 121.851        0.6139    
+    Multifocal                     80    5     2.220      0.391 - 12.604         0.3680    
+    Bilateral                      80    5     2.070      0.366 - 11.703         0.4106    
+    Tumor size >1cm                80    5     0.355      0.017 - 7.408          0.5039    
+    T stage T3+                    80    5     0.246      0.012 - 4.980          0.3609    
+    LN metastasis (N+)             80    5     2.630      0.383 - 18.064         0.3254    
+    Central LN >=5                 80    5     1.543      0.210 - 11.340         0.6698    
+    Lateral LN (+)                 80    5     1.301      0.180 - 9.413          0.7943    
+    BRAF V600E                     80    5     0.906      0.164 - 4.994          0.9099    
+    TERT promoter                  80    5     1.883      0.055 - 64.333         0.7254    
+    TP53                           80    5     NA         NA                     Too few positive cases (n=1)
+    Any mutation                   80    5     0.773      0.140 - 4.254          0.7673    
+    Co-mutation                    80    5     2.673      0.059 - 121.851        0.6139    
+
+  Age >55 (N=34, events=2):
+    Gender (Male)                  34    2     0.680      0.024 - 19.075         0.8206    
+    Age >=55 years                 34    2     0.275      0.135 - 0.562          0.0004    
+    Multifocal                     34    2     2.143      0.183 - 25.041         0.5434    
+    Bilateral                      34    2     2.143      0.183 - 25.041         0.5434    
+    Tumor size >1cm                34    2     5.000      0.383 - 65.267         0.2195    
+    T stage T3+                    34    2     3.400      0.278 - 41.615         0.3382    
+    LN metastasis (N+)             34    2     7.222      0.295 - 177.112        0.2258    
+    Central LN >=5                 34    2     21.000     0.829 - 532.285        0.0649    
+    Lateral LN (+)                 34    2     1.000      0.032 - 30.999         1.0000    
+    BRAF V600E                     34    2     2.474      0.209 - 29.240         0.4723    
+    TERT promoter                  34    2     1.686      0.043 - 65.803         0.7800    
+    TP53                           34    2     NA         NA                     Too few positive cases (n=1)
+    Any mutation                   34    2     1.640      0.143 - 18.873         0.6915    
+    Co-mutation                    34    2     2.440      0.047 - 125.791        0.6574    
+
+======================================================================
+  SA3: FIRTH vs STANDARD MLE LOGISTIC COMPARISON
+======================================================================
+
+  Parameter            Firth OR     MLE OR       Firth p      MLE p        Ratio     
+  ------------------------------------------------------------------------------
+  Intercept            0.032        0.021        <0.0001      <0.0001      1.565     
+  N+                   4.418        6.369        0.0968       <0.0001      0.694     
+  BRAF                 0.885        0.828        0.8696       <0.0001      1.069     
+  TERT                 0.943        0.000        0.9715       <0.0001      35291405871823.758
+  Error in standard logit: 'FirthLogit' object has no attribute 'log_likelihood'
+
+======================================================================
+  SA4: MISSING DATA ANALYSIS
+======================================================================
+
+  Total patients: 114
+
+  Variable                                           Missing    %        Type            Used in                  
+  ------------------------------------------------------------------------------------------------------------
+  Tumor size                                         70          61.4%   continuous      LN counts                
+  TIRADS (pre-op)                                    72          63.2%   categorical     TIRADS                   
+  Histology (tumor)                                  40          35.1%   categorical     Histology                
+  Histology (LN)                                     77          67.5%   categorical     Histology                
+  Central LN met count                               51          44.7%   continuous      LN counts                
+  Lateral LN met count                               49          43.0%   continuous      LN counts                
+  Contralateral LN met                               49          43.0%   categorical     LN counts                
+  FNA cytology                                       103         90.4%   categorical     FNA                      
+  TIRADS (post-op)                                   113         99.1%   categorical     TIRADS                   
+  Tuổi tại thời điểm chẩn đoán                       0            0.0%   continuous      N/A                      
+  3. Giới (Gender)                                   0            0.0%   binary          N/A                      
+  Phân loại T (T stage)                              1            0.9%   ordinal         N/A                      
+  Phân loại N (N stage)                              1            0.9%   ordinal         N/A                      
+  Phân loại M (M stage)                              0            0.0%   binary          N/A                      
+  Giai đoạn (Stage)                                  0            0.0%   ordinal         N/A                      
+  Kích thước nhân (Tumor size)                       70          61.4%   continuous      N/A                      
+  Bilateral (Vị trí)                                 0            0.0%   binary          N/A                      
+  Multifocal (Tổng số nhân)                          0            0.0%   binary          N/A                      
+  BRAF V600E                                         0            0.0%   binary          N/A                      
+  TERT                                               0            0.0%   binary          N/A                      
+  TP53                                               0            0.0%   binary          N/A                      
+
+  Note: TIRADS pre-op missingness = 72/114 (63.2%)
+  Note: FNA cytology missingness = 103/114 (90.4%) — not usable for modeling
+  Note: Histology missing = 40/114 (35.1%) — not used as covariate due to small N
+
+======================================================================
+  SENSITIVITY ANALYSIS COMPLETE
+======================================================================
+
+  SA1: Stricter recurrence (>=2 criteria)
+  SA2: Age subgroup (<=55 vs >55)
+  SA3: Firth vs Standard MLE comparison
+  SA4: Missing data report

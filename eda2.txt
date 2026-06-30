@@ -1,0 +1,269 @@
+=== Tái khám định kỳ? ===
+Count: 59, Null: 55
+Unique values: <StringArray>
+['Có', 'Có ', 'Không']
+Length: 3, dtype: str
+Value counts:
+Tái khám định kỳ?
+Có       55
+NaN      55
+Không     3
+Có        1
+
+=== Siêu âm: Phát hiện bất thường sau PT (tháng) ===
+Count: 55, Null: 59
+Unique values: ['Không' 'không' 'Có' '12 tháng' 3 'Không ' '8 tháng' 20 'Hạch' '11 tháng']
+Value counts:
+Siêu âm: Phát hiện bất thường sau PT (tháng)
+NaN         59
+Không       38
+không        7
+Không        3
+Có           1
+12 tháng     1
+3            1
+8 tháng      1
+20           1
+Hạch         1
+11 tháng     1
+
+=== Bất thường siêu âm cụ thể ===
+Count: 6, Null: 108
+Unique values: <StringArray>
+['Hạch cổ trung tâm', 'Hạch cổ bên']
+Length: 2, dtype: str
+Value counts:
+Bất thường siêu âm cụ thể
+NaN                  108
+Hạch cổ trung tâm      3
+Hạch cổ bên            3
+
+=== Chọc tế bào chẩn đoán ===
+Count: 11, Null: 103
+Unique values: <StringArray>
+['Đã chọc (+)', 'Không', 'Đã chọc (-)']
+Length: 3, dtype: str
+Value counts:
+Chọc tế bào chẩn đoán
+NaN            103
+Không            5
+Đã chọc (+)      4
+Đã chọc (-)      2
+
+=== Xét nghiệm: Phát hiện bất thường sau phẫu thuật (tháng) ===
+Count: 52, Null: 62
+Unique values: ['Không' 'không' 'missing' 20]
+Value counts:
+Xét nghiệm: Phát hiện bất thường sau phẫu thuật (tháng)
+NaN        62
+Không      36
+không      14
+missing     1
+20          1
+
+=== Bất thường xét nghiệm cụ thể ===
+Count: 2, Null: 112
+Unique values: <StringArray>
+['missing']
+Length: 1, dtype: str
+Value counts:
+Bất thường xét nghiệm cụ thể
+NaN        112
+missing      2
+
+=== Đã kết thúc điều trị Iod ===
+Count: 57, Null: 57
+Unique values: <StringArray>
+['Đã kết thúc']
+Length: 1, dtype: str
+Value counts:
+Đã kết thúc điều trị Iod
+Đã kết thúc    57
+NaN            57
+
+=== Ghi chú ===
+Count: 64, Null: 50
+Unique values: <StringArray>
+[                                                                                                                                                                                                                                                                              'Không giữ giấy tờ. Có thể gọi lại sau khi bệnh nhân ở nhà để xem xét nghiệm',
+                                                                                                                                                                                                                                                                                                                                                  'Thuê bao',
+                                                                                                                                                                                                                                                                                                                                         'Không giữ giấy tờ',
+                                                                                                                                                                                                                                                                                                        'Bệnh nhân mất giấy tờ, phẫu thuật hạch cổ năm 2023',
+                                                                                                                                                                                                                                                                                                             'Bệnh nhân lưu hồ sơ tại viện, không giữ ở nhà',
+                                                                                                                                                                                                                                                                                                                    'bệnh nhân không giữ giấy tờ xét nghiệm',
+                                                                                                                                                                                                                                              'Không giữ hồ sơ tái khám. Hiện tại BN tự đi tái khám mà không đi cùng người nhà nên không nắm được thông tin',
+                                                                                                                                                                                                                                                                                                                                       'BN bận, hẹn gọi lại',
+                                                                                                                                                                                                                                                                                                                                                   'Nhầm số',
+                                                                                                                                                                                                                                                                   'Bệnh nhân nộp hồ sơ lại viện, không lưu lại hồ sơ của các lần khám và điều trị đầu tiên',
+                                                                                                                                                                                                                                                                                                                                         'Số máy không đúng',
+                                                                                                                                                                                                                                                                                                'Bệnh nhân không giữu kết quả xét nghiệm trước điều trị iod',
+                                                                                                                                                                                                                                                                         'Đã gọi 5 lần vào 2 buổi khác nhau (1 chiều - 1 tối) nhưng đều không liên lạc được',
+                                                                                                                                                                                                                                                                                                                      'BN khám định kỳ tại phòng khám ngoài',
+                                                                                                                                                                                                                                                                                                            'Không nhớ liều và xét nghiệm, hẹn gửi qua Zalo',
+                                                                                                                                                                                                                                                                                                                                            'Không nghe máy',
+                                                                                                                                                                                                                                                                                                    'Bệnh nhân và người nhà không đồng ý cung cấp thông tin',
+                                                                                                                                                                                                                                                                                                                             'Gọi 3 lần không liên lạc được',
+                                                                                    'Bệnh nhân tái khám 3 tháng sau PT lần 1 tại BV Bạch Mai (không đủ thuốc iod phóng xạ nên dừng tái khám ở đây), sau đó chuyển sang Viện Y học Phóng xạ và Ung bướu Quân đội tái khám và điều trị iod phóng xạ lần 2, không phát hiện bất thường trên siêu âm và XN khác',
+                            'Bệnh nhân từ tháng 6/2022 đến tháng 6/2023 điều trị và tái khám tại BV bạch mai, tới tháng 6/2023 sang BV nội tiết mổ vét tiếp 3 hạch vùng ung thư. Hỏi xét nghiệm, bệnh nhân không đồng ý cung cấp kết quả - bệnh nhân nói là có lưu toàn bộ kết quả khám t6/2022 tới t6/2023 trong 1 tập hồ sơ photo đã nộp lại BV bạch mai.',
+                                                                                                                                                                                                                                                                                                                   'Không lưu kết quả siêu âm và xét nghiệm',
+                                                                                                                                                                                                                                                                                                                                         'Gọi 2 lần máy bận',
+                                                                                                                                                                                                                                                                                                                    'Số điện thoại không phải của bệnh nhân',
+                                                                                                                                                                                                                                                                                                                                    'Làm mất hồ sơ tái khám',
+                                                                                                                                                                                                                                                                                                                             'BN từ chối cung cấp thông tin',
+                                                                                                                                                                                                                                                                                                                              'Gọi 3 lần chưa liên lạc được',
+                                                                                                                                                                                                                                                                                                                       'Gia đình không lưu lại kết quả khám',
+                                                                                                                                                                                                                                                                                                                                  'Không giữ hồ sơ tái khám',
+                                                                                                                                                                                                                                                                                                                                      'Đợi số máy người nhà',
+                                                                                                                                                                                                                                                                                           'Không liên lạc được, kết bạn zalo không thấy bệnh nhân phản hồi',
+                                                                                                                                                                                                                                                                                                                                            'Thuê bao 2 lần',
+                                                                                                                                                                                                                                                                                                                                      'BN không giữ kết quả',
+                                                                                                                                                                                                                         'Đợt mổ đầu tiên, bệnh nhân dùng liều phóng xạ 90 - đợt này mổ lại dùng liều 100. Gia đình không giữ kết quả khám (nộp lại bác sĩ)',
+                                                                                                                                                                                                                                                                                                                        'Bệnh nhân để hồ sơ nhà mẹ đẻ, ở xa',
+                                                                                                                                                                                                                                                                                                  'BN nhà xa + sau điều trị sức khỏe tốt nên không tái khám',
+                                                                                                                                                                                                                                                                                                                                       'Không bắt máy lần 3',
+                                                                                                                                                                                                                                                                                                                                          'Bận, gọi lại sau',
+                                                                                                                                                                                                                                                                                                                'Bệnh nhân không đồng ý cung cấp thông tin ',
+                                                                                                                                                                                                                                                                                                                        'Hẹn bệnh nhân gửi kết quả qua Zalo',
+                                                                                                                                                                                                                                                                                                'Hạch viêm theo dõi sau phẫu thuật mấy tháng (BN ko nhớ rõ)',
+                                                                                                                                                                                                                                                                                                      'Hẹn trả kết quả qua zalo. Đã hơn 1 năm chưa tái khám',
+                                                                                                                                                                                                                                                                                                    'Gọi lại để hỏi về iod phóng xạ, đang gọi thì sập nguồn',
+                                                                                                                                                                                                                                                                                                                      'Bn do lụt mất hết giấy tờ xét nghiệm',
+                                                                                                                                                                                                                                                                                                                    'Bệnh nhân không giữ giấy tờ xét nghiệm',
+                                                                                                                                                                                                                                                                                                                             'Gọi 3 lần  chưa liên lạc được',
+ 'Bệnh nhân phẫu thuật lần 1 T4/2023 đến T5/2024 phẫu thuật lần 2 (siêu âm mọc lại nhiều hạch, không rõ 1 hay 2 bên). Đến 23/10/2024 tái khám tại BV Bạch Mai phát hiện có hạch nhỏ cổ trái, chọc TB (-), theo dõi tiếp, chưa điều trị gì. Bệnh nhân chỉ chụp lại kết quả siêu âm bất thường lần tái khám gần nhất, còn lại gửi kết quả cho bác sĩ điều trị']
+Length: 46, dtype: str
+Value counts:
+Ghi chú
+NaN                                                                                                                                                                                                                                                                                                                                                          50
+Không giữ giấy tờ                                                                                                                                                                                                                                                                                                                                            10
+Không nghe máy                                                                                                                                                                                                                                                                                                                                                4
+Nhầm số                                                                                                                                                                                                                                                                                                                                                       3
+Thuê bao                                                                                                                                                                                                                                                                                                                                                      2
+bệnh nhân không giữ giấy tờ xét nghiệm                                                                                                                                                                                                                                                                                                                        2
+BN không giữ kết quả                                                                                                                                                                                                                                                                                                                                          2
+Không bắt máy lần 3                                                                                                                                                                                                                                                                                                                                           2
+Không giữ giấy tờ. Có thể gọi lại sau khi bệnh nhân ở nhà để xem xét nghiệm                                                                                                                                                                                                                                                                                   1
+Bệnh nhân mất giấy tờ, phẫu thuật hạch cổ năm 2023                                                                                                                                                                                                                                                                                                            1
+Bệnh nhân lưu hồ sơ tại viện, không giữ ở nhà                                                                                                                                                                                                                                                                                                                 1
+Không giữ hồ sơ tái khám. Hiện tại BN tự đi tái khám mà không đi cùng người nhà nên không nắm được thông tin                                                                                                                                                                                                                                                  1
+BN bận, hẹn gọi lại                                                                                                                                                                                                                                                                                                                                           1
+Bệnh nhân nộp hồ sơ lại viện, không lưu lại hồ sơ của các lần khám và điều trị đầu tiên                                                                                                                                                                                                                                                                       1
+Số máy không đúng                                                                                                                                                                                                                                                                                                                                             1
+Bệnh nhân không giữu kết quả xét nghiệm trước điều trị iod                                                                                                                                                                                                                                                                                                    1
+Đã gọi 5 lần vào 2 buổi khác nhau (1 chiều - 1 tối) nhưng đều không liên lạc được                                                                                                                                                                                                                                                                             1
+BN khám định kỳ tại phòng khám ngoài                                                                                                                                                                                                                                                                                                                          1
+Không nhớ liều và xét nghiệm, hẹn gửi qua Zalo                                                                                                                                                                                                                                                                                                                1
+Bệnh nhân và người nhà không đồng ý cung cấp thông tin                                                                                                                                                                                                                                                                                                        1
+Gọi 3 lần không liên lạc được                                                                                                                                                                                                                                                                                                                                 1
+Bệnh nhân tái khám 3 tháng sau PT lần 1 tại BV Bạch Mai (không đủ thuốc iod phóng xạ nên dừng tái khám ở đây), sau đó chuyển sang Viện Y học Phóng xạ và Ung bướu Quân đội tái khám và điều trị iod phóng xạ lần 2, không phát hiện bất thường trên siêu âm và XN khác                                                                                        1
+Bệnh nhân từ tháng 6/2022 đến tháng 6/2023 điều trị và tái khám tại BV bạch mai, tới tháng 6/2023 sang BV nội tiết mổ vét tiếp 3 hạch vùng ung thư. Hỏi xét nghiệm, bệnh nhân không đồng ý cung cấp kết quả - bệnh nhân nói là có lưu toàn bộ kết quả khám t6/2022 tới t6/2023 trong 1 tập hồ sơ photo đã nộp lại BV bạch mai.                                1
+Không lưu kết quả siêu âm và xét nghiệm                                                                                                                                                                                                                                                                                                                       1
+Gọi 2 lần máy bận                                                                                                                                                                                                                                                                                                                                             1
+Số điện thoại không phải của bệnh nhân                                                                                                                                                                                                                                                                                                                        1
+Làm mất hồ sơ tái khám                                                                                                                                                                                                                                                                                                                                        1
+BN từ chối cung cấp thông tin                                                                                                                                                                                                                                                                                                                                 1
+Gọi 3 lần chưa liên lạc được                                                                                                                                                                                                                                                                                                                                  1
+Gia đình không lưu lại kết quả khám                                                                                                                                                                                                                                                                                                                           1
+Không giữ hồ sơ tái khám                                                                                                                                                                                                                                                                                                                                      1
+Đợi số máy người nhà                                                                                                                                                                                                                                                                                                                                          1
+Không liên lạc được, kết bạn zalo không thấy bệnh nhân phản hồi                                                                                                                                                                                                                                                                                               1
+Thuê bao 2 lần                                                                                                                                                                                                                                                                                                                                                1
+Đợt mổ đầu tiên, bệnh nhân dùng liều phóng xạ 90 - đợt này mổ lại dùng liều 100. Gia đình không giữ kết quả khám (nộp lại bác sĩ)                                                                                                                                                                                                                             1
+Bệnh nhân để hồ sơ nhà mẹ đẻ, ở xa                                                                                                                                                                                                                                                                                                                            1
+BN nhà xa + sau điều trị sức khỏe tốt nên không tái khám                                                                                                                                                                                                                                                                                                      1
+Bận, gọi lại sau                                                                                                                                                                                                                                                                                                                                              1
+Bệnh nhân không đồng ý cung cấp thông tin                                                                                                                                                                                                                                                                                                                     1
+Hẹn bệnh nhân gửi kết quả qua Zalo                                                                                                                                                                                                                                                                                                                            1
+Hạch viêm theo dõi sau phẫu thuật mấy tháng (BN ko nhớ rõ)                                                                                                                                                                                                                                                                                                    1
+Hẹn trả kết quả qua zalo. Đã hơn 1 năm chưa tái khám                                                                                                                                                                                                                                                                                                          1
+Gọi lại để hỏi về iod phóng xạ, đang gọi thì sập nguồn                                                                                                                                                                                                                                                                                                        1
+Bn do lụt mất hết giấy tờ xét nghiệm                                                                                                                                                                                                                                                                                                                          1
+Bệnh nhân không giữ giấy tờ xét nghiệm                                                                                                                                                                                                                                                                                                                        1
+Gọi 3 lần  chưa liên lạc được                                                                                                                                                                                                                                                                                                                                 1
+Bệnh nhân phẫu thuật lần 1 T4/2023 đến T5/2024 phẫu thuật lần 2 (siêu âm mọc lại nhiều hạch, không rõ 1 hay 2 bên). Đến 23/10/2024 tái khám tại BV Bạch Mai phát hiện có hạch nhỏ cổ trái, chọc TB (-), theo dõi tiếp, chưa điều trị gì. Bệnh nhân chỉ chụp lại kết quả siêu âm bất thường lần tái khám gần nhất, còn lại gửi kết quả cho bác sĩ điều trị     1
+
+=== Xạ trị I-131 ===
+Count: 113, Null: 1
+Unique values: [0. 1.]
+Value counts:
+Xạ trị I-131
+0.0    106
+1.0      7
+NaN      1
+
+=== Phẫu thuật cắt tuyến giáp ===
+Count: 114, Null: 0
+Unique values: [ True False]
+Value counts:
+Phẫu thuật cắt tuyến giáp
+True     80
+False    34
+
+=== Ghi chú ===
+0     Không giữ giấy tờ. Có thể gọi lại sau khi bệnh...
+3                                              Thuê bao
+4                                     Không giữ giấy tờ
+5                                     Không giữ giấy tờ
+6     Bệnh nhân mất giấy tờ, phẫu thuật hạch cổ năm ...
+7         Bệnh nhân lưu hồ sơ tại viện, không giữ ở nhà
+8                bệnh nhân không giữ giấy tờ xét nghiệm
+9     Không giữ hồ sơ tái khám. Hiện tại BN tự đi tá...
+11                                  BN bận, hẹn gọi lại
+14                                              Nhầm số
+19    Bệnh nhân nộp hồ sơ lại viện, không lưu lại hồ...
+25                                    Không giữ giấy tờ
+27                                    Không giữ giấy tờ
+29                                    Số máy không đúng
+30    Bệnh nhân không giữu kết quả xét nghiệm trước ...
+31               bệnh nhân không giữ giấy tờ xét nghiệm
+33    Đã gọi 5 lần vào 2 buổi khác nhau (1 chiều - 1...
+34                 BN khám định kỳ tại phòng khám ngoài
+35                                    Không giữ giấy tờ
+36       Không nhớ liều và xét nghiệm, hẹn gửi qua Zalo
+37                                       Không nghe máy
+38    Bệnh nhân và người nhà không đồng ý cung cấp t...
+39                        Gọi 3 lần không liên lạc được
+42    Bệnh nhân tái khám 3 tháng sau PT lần 1 tại BV...
+43    Bệnh nhân từ tháng 6/2022 đến tháng 6/2023 điề...
+47              Không lưu kết quả siêu âm và xét nghiệm
+49                                    Không giữ giấy tờ
+50                                    Gọi 2 lần máy bận
+53                                             Thuê bao
+54                                       Không nghe máy
+Name: Ghi chú, dtype: str
+
+=== Tái khám định kỳ? ===
+Tái khám định kỳ?
+Có       55
+NaN      55
+Không     3
+Có        1
+Name: count, dtype: int64
+
+=== Bất thường siêu âm cụ thể ===
+Bất thường siêu âm cụ thể
+NaN                  108
+Hạch cổ trung tâm      3
+Hạch cổ bên            3
+Name: count, dtype: int64
+
+=== Bất thường xét nghiệm cụ thể ===
+Bất thường xét nghiệm cụ thể
+NaN        112
+missing      2
+Name: count, dtype: int64
+
+=== Xử trí ===
+Xử trí
+NaN           108
+Phẫu thuật      4
+Khác            1
+Theo dõi        1
+Name: count, dtype: int64
+
+=== Bất thường trong lần khám gần nhất sau xử trí ===
+Bất thường trong lần khám gần nhất sau xử trí
+NaN                     105
+Không còn bất thường      8
+Có bất thường             1
+Name: count, dtype: int64
+

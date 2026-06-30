@@ -1,0 +1,153 @@
+0: Mã bệnh nhân
+1: ID định danh
+2: Ngày tiến hành khảo sát (ngay trước cắt tuyến giáp)
+3: 1. Họ và tên
+4: 2. Năm sinh
+5: 3. Giới
+6: 4. Nghề nghiệp
+7: 5. Địa chỉ (Huyện - Tỉnh TP)
+8: 6. SĐT liên lạc
+9: 7.TS bệnh lý về tuyến giáp (trước khi được chẩn đoán ung thư tuyến giáp, nếu có):
+10: 8. TS các bệnh khác 
+
+11: 11. Tiền sử gia đình (Cha, mẹ, anh chị em ruột):
+12: 12. Năm chẩn đoán bệnh 
+13: Tuổi tại thời điểm chẩn đoán
+14: 13. Năm chẩn đoán di căn (nếu có)
+15: 14. Cơ quan di căn (nếu có)
+16: 15> Điều trị đã sử dụng
+17: Phẫu thuật cắt tuyến giáp
+18: Năm
+19: Hạch cổ
+20: Thể mô bệnh học u
+21: Mô bệnh học của hạch
+22: Số hạch vét được (trung tâm)
+23: Số hạch di căn (trung tâm)
+24: Số hạch vét được (cùng bên)
+25: Số hạch di căn (cùng bên)
+26: Số hạch vét được (đối bên)
+27: Số hạch di căn (đối bên)
+28: Xạ trị I-131
+29: Năm.1
+30: Số liều
+31: Liều lần 1
+32: Liều lần 2
+33: Liều lần 3
+34: Ngày bắt đầu theo dõi
+35: IV> Khám lâm sàng (*ngay trước điều trị đích)
+36: 16. Cân nặng (kg)
+37: 17. Chiều cao (cm)
+38: 18. Triệu chứng toàn thân và triệu chứng cơ năng
+39: Tuyến giáp
+40: Nhân tuyến giáp
+41: Số lượng
+42: Vị trí
+43: Mật độ
+44: Di động theo nhịp nuốt
+45: Tính chất đau
+46: Hạch cổ.1
+47: Số lượng.1
+48: Vị trí.1
+49: Triệu chứng khác (ghi rõ)
+50: Hồng cầu (RBC) (T/L)
+51: Hb (g/L)
+52: Bạch cầu (WBC) (G/L)
+53: NEUT (G/L)
+54: Tiểu cầu (G/L)
+55: PT% (%)
+56: INR
+57: APTT b/c
+58: Glucose
+59: Bilirubin toàn phần (μmol/L)
+60: Bilirubin trực tiếp (μmol/L)
+61: Albumin (g/L)
+62: ALT (UI/L)
+63: AST (UI/L)
+64: GGT
+65: Ure (mmol/L)
+66: Creatinine (μmol/L)
+67: Canxi (mmol/L)
+68: PTH trc PT
+69: T3 trc PT
+70: FT3 trc PT
+71: T4 trc PT
+72: FT4 trc PT
+73: TSH trc PT
+74: Tg trc PT
+75: Anti-Tg trc PT
+76: Calcitonin trc PT
+77: CEA trc PT
+78: TPO-Ab trc PT
+79: TRAb trc PT
+80: PTH trc I-131
+81: T3 trc I-131
+82: FT3 trc I-131
+83: T4 trc I-131
+84: FT4 trc I-131
+85: TSH trc I-131
+86: Tg trc I-131
+87: Anti-Tg trc I-131
+88: Calcitonin trc I-131
+89: CEA trc I-131
+90: TPO-Ab trc I-131
+91: TRAb trc I-131
+92: Siêu âm (0 = k có tuyến giáp) trc pt
+93: Tổng số nhân trc pt
+94: Vị trí nhân trc pt
+95: Kích thước nhân (mm) trc pt
+96: Phân độ TIRADS trc pt
+97: Tổng số hạch vùng cổ trc pt (+: nhiều)
+98: Vị trí trc pt
+99: Kích thước lớn nhất (mm) trc pt
+100: Siêu âm (0 = k có tuyến giáp) sau pt
+101: Tổng số nhân sau pt
+102: Vị trí nhân sau pt
+103: Kích thước nhân (mm) sau pt
+104: Phân độ TIRADS sau pt
+105: Tổng số hạch vùng cổ sau pt (+:nhiều)
+106: Vị trí sau pt
+107: Kích thước lớn nhất (mm) sau pt
+108: FNA
+109: Xạ hình tuyến giáp
+110: CT/MRI
+111: Phân loại T
+112: Phân loại N
+113: Phân loại M
+114: Giai đoạn
+115: PP Xét nghiệm gen trước điều trị
+116: Kết quả XN gen (0: bt, 1: V600E)
+117: F. Phương pháp điều trị chính
+118: Cắt tuyến giáp (chính)
+119: Số hạch vét được (trung tâm).1
+120: Số hạch di căn (trung tâm).1
+121: Số hạch vét được (cùng bên).1
+122: Số hạch di căn (cùng bên).1
+123: Số hạch vét được (đối bên).1
+124: Số hạch di căn (đối bên).1
+125: I-131 (chính)
+126: Số liều.1
+127: Liều lần 1.1
+128: Liều lần 2.1
+129: CÂU HỎI FOLLOW-UP
+130: Tái khám định kỳ?
+131: Lý do không?
+132: Siêu âm: Phát hiện bất thường sau PT (tháng)
+133: Bất thường siêu âm cụ thể
+134: Bất thường khác
+135: Chọc tế bào chẩn đoán
+136: Xử trí
+137: Xử trí khác
+138: Bất thường trong lần khám gần nhất sau xử trí
+139: Bất thường cụ thể sau xử trí?
+140: Xét nghiệm: Phát hiện bất thường sau phẫu thuật (tháng)
+141: Bất thường xét nghiệm cụ thể
+142: Xử trí bất thường xét nghiệm
+143: Số lần điều trị iod phóng xạ
+144: Liều iod mỗi lần
+145: XN trong điều trị khác
+146: Tg trước điều trị
+147: Tg sau điều trị
+148: anti-Tg trước điều trị
+149: anti-Tg sau điều trị
+150: Đã kết thúc điều trị Iod
+151: Ghi chú

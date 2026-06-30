@@ -1,0 +1,16 @@
+=== FILE 2: GENETIC DATA ===
+Shape: (115, 18)
+Columns: ['Mã bệnh nhân', 'BRAF R682Q', 'BRAF A404fs', 'BRAFV600E', 'BRAF', 'TERT R756C', 'TERT T567M', 'TERT R577Q', 'TERT D685N', 'TERT R938Q', 'TERT D516N', 'TERT V272M', 'TERT P438H', 'TERT T1111M', 'TERT', 'TP53:c.559+1G>A', 'TP53:c.96+1G>A', 'TP53']
+
+   Mã bệnh nhân  BRAF R682Q  BRAF A404fs  BRAFV600E  BRAF  TERT R756C  TERT T567M  TERT R577Q  TERT D685N  TERT R938Q  TERT D516N  TERT V272M  TERT P438H  TERT T1111M  TERT  TP53:c.559+1G>A  TP53:c.96+1G>A  TP53
+0     220027644           0            0          0     0           0           0           0           0           0           0           0           0            0     0                0               0     0
+1     220025423           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+2     220037060           0            0          0     0           0           2           2           0           0           0           0           0            0     2                2               0     2
+3     220042601           0            0          0     0           0           0           0           0           0           0           0           0            0     0                0               2     2
+4     220041481           0            0          0     0           0           0           0           0           0           0           0           0            0     0                0               0     0
+5     230042037           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+6     230025245           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+7     230042190           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+8     220038237           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+9     230010141           0            0          2     2           0           0           0           0           0           0           0           0            0     0                0               0     0
+

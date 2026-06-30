@@ -1,0 +1,247 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{geometry}
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\usepackage{caption}
+\usepackage{float}
+
+\title{\textbf{REPORT ON RECURRENCE RISK ANALYSIS\\FOR THYROID CANCER\\ACCORDING TO ATA 2025 GUIDELINES}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section{Study Sample Characteristics}
+Total patients: \textbf{114}. Recurrence events: \textbf{7} (6.1\%).
+
+\subsection{ATA 2025 PTC Risk Stratification}
+\begin{table}[H]
+\centering
+\caption{Patient distribution by ATA 2025 PTC 4-level risk stratification}
+\label{tab:ata}
+\begin{tabular}{lcc}
+\toprule
+Risk Stratification (PTC) & N (n=114) & Recurrence rate \\
+\midrule
+Low                 & 69 (60.5\%)   & 5/69 (7.2\%)   \\
+Low-Intermediate    & 2 (1.8\%)     & 1/2 (50.0\%)   \\
+Intermediate-High   & 15 (13.2\%)   & 0/15 (0.0\%)   \\
+High                & 28 (24.6\%)   & 1/28 (3.6\%)   \\
+\bottomrule
+\end{tabular}
+\caption*{\emph{Note:} The 4-level system (Low / Low-Intermediate / Intermediate-High / High) replaces the older 3-level system per ATA 2025 PTC guidelines. Due to missing histopathological criteria (aggressive histology, margins, vascular invasion), these classifications are based on available variables only.}
+\end{table}
+
+\subsection{Statistical Method: Firth Logistic Regression}
+Firth's penalized likelihood logistic regression is used instead of standard maximum likelihood estimation. Standard logistic regression fails when a predictor has zero events in one group (complete separation), producing infinite odds ratios. This affects TERT, TP53, and co-mutation variables. Firth's method adds a Jeffreys prior penalty $0.5 \cdot \log|I(\beta)|$ to the log-likelihood, guaranteeing finite estimates for all parameters.
+
+\subsection{Descriptive Statistics of Study Variables}
+\begin{longtable}{lcc}
+\caption{Descriptive statistics of clinical and genetic variables}
+\label{tab:desc}\\
+\toprule
+Variable & N (n=114) & \% \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{\tablename\ \thetable\ -- continued} \\
+\toprule
+Variable & N (n=114) & \% \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Multifocal ($>$1 nodule)                 & 31  & 27.2 \\
+Bilateral involvement               & 32  & 28.1 \\
+Tumor size $>$1cm              & 21  & 18.4 \\
+Tumor size $>$4cm              & 1   & 0.9 \\
+T stage T3+                    & 28  & 24.6 \\
+Lymph node metastasis (N+)                 & 59  & 51.8 \\
+Lateral neck metastasis (N1b)        & 8   & 7.0 \\
+Central LN $\geq$5          & 16  & 14.0 \\
+Lateral neck LN (+)                  & 21  & 18.4 \\
+BRAF V600E                       & 45  & 39.5 \\
+Other BRAF                        & 2   & 1.8 \\
+TERT mutation                    & 6   & 5.3 \\
+TP53 mutation                    & 2   & 1.8 \\
+Any mutation            & 51  & 44.7 \\
+Co-mutation ($\geq$2 genes)     & 4   & 3.5 \\
+BRAF + TERT                      & 3   & 2.6 \\
+BRAF + TP53                      & 0   & 0.0 \\
+\end{longtable}
+
+\section{Univariate Analysis Results}
+\subsection{Firth Univariate Logistic Regression}
+\begin{table}[H]
+\centering
+\caption{Firth univariate analysis of factors associated with recurrence}
+\label{tab:uni}
+\begin{tabular}{lcccc}
+\toprule
+Variable & N & OR (Firth) & 95\% CI (Firth) & p \\
+\midrule
+Multifocal ($>$1 nodule)           & 114 & 2.170 & 0.495--9.514   & 0.304 \\
+Bilateral involvement         & 114 & 2.070 & 0.473--9.060   & 0.334 \\
+Tumor size $>$1cm        & 114 & 0.985 & 0.151--6.432   & 0.987 \\
+Tumor size $>$4cm        & 114 & --    & -- (excluded)   & --   \\
+T stage T3+              & 114 & 0.676 & 0.106--4.320   & 0.679 \\
+LN metastasis (N+)           & 114 & 4.414 & 0.707--27.553  & 0.112 \\
+Lateral neck metastasis (N1b)  & 114 & 3.092 & 0.409--23.381  & 0.274 \\
+Central LN $\geq$5    & 114 & 2.931 & 0.574--14.980  & 0.196 \\
+Lateral neck LN (+)            & 114 & 0.985 & 0.151--6.432   & 0.987 \\
+BRAF V600E                 & 114 & 1.199 & 0.278--5.176   & 0.808 \\
+BRAF (any)              & 114 & 1.110 & 0.257--4.788   & 0.889 \\
+TERT mutation              & 114 & 1.041 & 0.043--25.413  & 0.980 \\
+TP53 mutation              & 114 & 2.813 & 0.063--124.823 & 0.593 \\
+Co-mutation ($\geq$2)   & 114 & 1.533 & 0.054--43.723  & 0.803 \\
+BRAF + TERT                & 114 & 1.990 & 0.060--66.025  & 0.700 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{Note:} Firth penalized logistic regression resolves complete separation. All variables now have finite OR and 95\% CI. TERT, TP53, and co-mutation estimates are finite but have wide CIs due to low event count (7/114). Tumor size $>$4cm (n=1) and BRAF+TP53 (n=0) excluded due to insufficient positive cases.
+
+\section{Multivariate Analysis Results}
+
+\subsection{Model 1 -- Clinical variables (Firth)}
+\begin{table}[H]
+\centering
+\caption{Multivariate Firth analysis -- Clinical model (N=114, events=7)}
+\label{tab:multi1}
+\begin{tabular}{lccc}
+\toprule
+Variable & OR (Firth) & 95\% CI (Firth) & p \\
+\midrule
+Size $>$1cm     & 0.716 & 0.113--4.526  & 0.723 \\
+T3+         & 0.570 & 0.094--3.461  & 0.541 \\
+N+          & 4.979 & 0.840--29.503 & \textbf{0.077} \\
+\bottomrule
+\end{tabular}
+\caption*{Hosmer-Lemeshow: $\chi^2=4.07$, df=8, p=0.851}
+\end{table}
+
+\subsection{Model 2 -- Genetic variables (Firth)}
+\begin{table}[H]
+\centering
+\caption{Multivariate Firth analysis -- Genetic model (N=114, events=7)}
+\label{tab:multi2}
+\begin{tabular}{lccc}
+\toprule
+Variable & OR (Firth) & 95\% CI (Firth) & p \\
+\midrule
+BRAF V600E & 1.180 & 0.282--4.934 & 0.820 \\
+TERT       & 1.040 & 0.045--23.937 & 0.980 \\
+\bottomrule
+\end{tabular}
+\caption*{Hosmer-Lemeshow: $\chi^2=7.86$, df=8, p=0.447}
+\end{table}
+
+\subsection{Model 3 -- Combined clinical + genetic (Firth)}
+\begin{table}[H]
+\centering
+\caption{Multivariate Firth analysis -- Combined model (N=114, events=7)}
+\label{tab:multi3}
+\begin{tabular}{lccc}
+\toprule
+Variable & OR (Firth) & 95\% CI (Firth) & p \\
+\midrule
+Size $>$1cm     & 0.710 & 0.119--4.218  & 0.706 \\
+T3+         & 0.545 & 0.090--3.297  & 0.508 \\
+N+          & 4.650 & 0.863--25.049 & \textbf{0.074} \\
+BRAF V600E  & 1.111 & 0.265--4.661  & 0.886 \\
+TERT        & 0.978 & 0.043--22.227 & 0.989 \\
+\bottomrule
+\end{tabular}
+\caption*{Hosmer-Lemeshow: $\chi^2=6.37$, df=8, p=0.606}
+\end{table}
+
+\subsection{Model 4 -- N+ and co-mutation (Firth)}
+\begin{table}[H]
+\centering
+\caption{Multivariate Firth analysis -- N+ and co-mutation (N=114, events=7)}
+\label{tab:multi4}
+\begin{tabular}{lccc}
+\toprule
+Variable & OR (Firth) & 95\% CI (Firth) & p \\
+\midrule
+N+             & 4.118 & 0.710--23.891 & 0.115 \\
+Co-mutation & 2.163 & 0.065--71.702 & 0.666 \\
+\bottomrule
+\end{tabular}
+\caption*{Hosmer-Lemeshow: $\chi^2=4.11$, df=8, p=0.848}
+\end{table}
+
+\section{Detailed Analysis of BRAF V600E}
+BRAF V600E prevalence is 45/114 (39.5\%). Univariate Firth OR=1.20 (95\% CI 0.28--5.18, p=0.81). Subgroup analyses were performed to explore potential effect modification.
+
+\subsection{Forest Plot: BRAF OR by Subgroup}
+Forest plot available in the PDF report (Figure \ref{fig:braf_forest}). Key results:
+\begin{itemize}
+  \item All patients: OR=1.20 (p=0.81)
+  \item N+ subgroup: OR=1.12 (p=0.89)
+  \item N0 subgroup: not estimable (1 event)
+  \item Multifocal: OR=1.45 (p=0.75)
+  \item Unifocal: OR=1.32 (p=0.77)
+  \item T1-T2: OR=1.02 (p=0.98)
+  \item T3+: not estimable (1 event)
+\end{itemize}
+
+\subsection{Recurrence by BRAF and N Status}
+\begin{table}[H]
+\centering
+\caption{Recurrence rates stratified by BRAF V600E and N status}
+\label{tab:braf_n}
+\begin{tabular}{lccc}
+\toprule
+Group & N & Recurrence & Rate \\
+\midrule
+BRAF$-$ / N0 & 38 & 1 & 2.6\% \\
+BRAF$+$ / N0 & 17 & 0 & 0.0\% \\
+BRAF$+$ / N$+$ & 28 & 3 & 10.7\% \\
+BRAF$-$ / N$+$ & 31 & 3 & 9.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+Recurrence rates are driven by N status, not BRAF. In N+ patients, BRAF+ (10.7\%) vs BRAF$-$ (9.7\%) are nearly identical.
+
+\subsection{Mutation Co-occurrence}
+\begin{table}[H]
+\centering
+\caption{Co-mutation counts among 114 patients}
+\label{tab:comut}
+\begin{tabular}{lccc}
+\toprule
+ & BRAF V600E & TERT & TP53 \\
+\midrule
+BRAF V600E & 45 & 2 & 0 \\
+TERT & 2 & 6 & 1 \\
+TP53 & 0 & 1 & 2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+Very low co-occurrence: BRAF+TERT only 2 cases (1.8\%), BRAF+TP53: 0 cases.
+
+\subsection{Interpretation}
+BRAF V600E does not independently predict recurrence in this dataset. Possible explanations: (1) insufficient power (only 7 events), (2) BRAF effect may depend on histologic subtype (tall cell, hobnail) unavailable here, (3) BRAF may require TERT co-mutation for risk elevation (only 2 patients).
+
+\section{Key Findings}
+\begin{enumerate}
+  \item \textbf{Firth penalized logistic regression} was applied to address complete separation. All variables now have finite odds ratios and confidence intervals.
+  \item The overall recurrence rate was 6.1\% (7/114 patients).
+  \item \textbf{N+ (lymph node metastasis)} was the strongest and most consistent predictor across all models: Firth OR=4.41 in univariate (p=0.112) and OR=4.98 in Model 1 (p=0.077).
+  \item \textbf{TP53 mutation} (OR=2.81) showed a possible risk elevation but CI is extremely wide (0.06--124.82). \textbf{TERT} (OR=1.04) showed no association.
+  \item \textbf{BRAF V600E} (prevalence 39.5\%) was not associated with recurrence in any subgroup (Firth OR=1.20; p=0.81 overall). Subgroup analyses (N$\pm$, multifocality, T stage) all show OR$\approx$1. Recurrence is driven by N+ status, not BRAF.
+  \item All 4 multivariate models pass the Hosmer-Lemeshow goodness-of-fit test (all p$>$0.05).
+  \item \textbf{Limitations:} Only 7 events. Firth resolves separation but cannot increase effective sample size. CIs for rare mutations remain very wide. Larger studies with Cox regression are recommended.
+\end{enumerate}
+
+\end{document}
