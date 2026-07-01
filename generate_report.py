@@ -322,6 +322,26 @@ pdf.ln(2)
 
 pdf.note_text('All models pass Hosmer-Lemeshow test (p>0.05). N+ is the strongest predictor across all models. Model 5 (N+ + BRAF + TERT) is the primary validation model. BRAFxTERT interaction OR=7.51 but CI extremely wide, reflecting insufficient power.')
 
+pdf.ln(1)
+pdf.subsection_title('Table 4b: Model Performance Comparison')
+pdf.body_text('AUC with bootstrap 95% CI (200 reps), Brier score, LogLoss, and Akaike Information Criterion (AIC) for all 8 models.')
+perf_data = [
+    ['M1: Clinical (N+ + T3+ + Size)', '114', '7', '3', '0.720', '0.553-0.927', '0.055', '0.212', '56.3'],
+    ['M2: Genetic (BRAF+TERT+TP53)', '114', '7', '3', '0.575', '0.169-0.738', '0.058', '0.234', '61.4'],
+    ['M3: Combined', '114', '7', '5', '0.733', '0.546-0.916', '0.056', '0.213', '60.7'],
+    ['M4: N+ + Co-mutation', '114', '7', '2', '0.770', '0.452-0.847', '0.056', '0.217', '55.5'],
+    ['M5: N+ + BRAF + TERT', '114', '7', '3', '0.694', '0.516-0.865', '0.056', '0.216', '57.2'],
+    ['M6: N+ + TERT', '114', '7', '2', '0.752', '0.441-0.835', '0.056', '0.216', '55.1'],
+    ['M7: N+ + TP53', '114', '7', '2', '0.748', '0.472-0.838', '0.056', '0.218', '55.7'],
+    ['M8: N+ + BRAF+TERT+INT', '114', '7', '4', '0.676', '0.503-0.860', '0.057', '0.219', '59.9'],
+]
+pdf.make_table(['Model', 'N', 'Events', 'k', 'AUC', '95% CI (AUC)', 'Brier', 'LogLoss', 'AIC'],
+               perf_data, [40, 8, 8, 6, 10, 22, 10, 10, 10])
+pdf.note_text('M4 (N+ + Co-mutation) achieves highest AUC=0.770 but CI very wide (0.452-0.847). '
+              'M2 (genetic only) has lowest AUC=0.575. Adding genes to clinical (M3 vs M1) does not improve AUC. '
+              'AIC favors simpler models (M6, M7, M4). All CIs overlap substantially, reflecting limited power.')
+pdf.ln(1)
+
 # ===================== TABLE 5: BOOTSTRAP =====================
 pdf.subsection_title('Table 5: Bootstrap Validation (1000 reps)')
 pdf.body_text('Model: N+ + BRAF V600E + TERT. Bias-corrected estimates with percentile CIs.')
@@ -561,6 +581,27 @@ pdf.body_text(
     '  3. Firth guarantees convergence where MLE fails'
 )
 
+pdf.subsection_title('E. Table A3 — Diagnostic Metrics for Model 5 (N+ + BRAF + TERT)')
+pdf.body_text(
+    'Sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), '
+    'accuracy, and Youden index (sensitivity + specificity - 1) at various probability thresholds. '
+    'Optimal threshold maximizes Youden index.'
+)
+diag_data = [
+    ['0.020', '7', '107', '0', '0', '1.000', '0.000', '0.061', '0.000', '0.061', '0.0000'],
+    ['0.050*', '6', '53', '1', '54', '0.857', '0.505', '0.102', '0.982', '0.526', '0.3618'],
+    ['0.100', '6', '53', '1', '54', '0.857', '0.505', '0.102', '0.982', '0.526', '0.3618'],
+    ['0.120', '3', '25', '4', '82', '0.429', '0.766', '0.107', '0.953', '0.746', '0.1949'],
+    ['0.150', '0', '0', '7', '107', '0.000', '1.000', '0.000', '0.939', '0.939', '0.0000'],
+]
+pdf.make_table(['Threshold', 'TP', 'FP', 'FN', 'TN', 'Sens', 'Spec', 'PPV', 'NPV', 'Acc', 'Youden'],
+               diag_data, [14, 8, 8, 8, 8, 14, 14, 14, 14, 14, 14])
+pdf.note_text(
+    '* Optimal threshold (Youden index = 0.36). Sensitivity 85.7% (detects 6/7 recurrences) '
+    'with specificity 50.5%. PPV low (10.2%) due to low event prevalence (6.1%). '
+    'NPV 98.2% ensures high confidence when predicting no recurrence.'
+)
+
 # Summary footnotes note
 pdf.ln(2)
 pdf.set_draw_color(0, 51, 102)
@@ -571,7 +612,12 @@ pdf.set_font('ArialUni', 'I', 7.5)
 pdf.set_text_color(100, 100, 100)
 pdf.multi_cell(0, 4, 'Abbreviations: OR = Odds Ratio; CI = Confidence Interval; Firth = Firth penalized logistic regression; '
                'MLE = Maximum Likelihood Estimation; SE = Standard Error. All calculations performed in Python 3.14 '
-               'using custom FirthLogit implementation with scipy.optimize and numpy.')
+                'using custom FirthLogit implementation with scipy.optimize and numpy.\n'
+                'AUC = Area Under the Receiver Operating Characteristic Curve; '
+                'AIC = Akaike Information Criterion; '
+                'TP = True Positive; FP = False Positive; FN = False Negative; TN = True Negative; '
+                'Sens = Sensitivity; Spec = Specificity; PPV = Positive Predictive Value; '
+                'NPV = Negative Predictive Value; Acc = Accuracy.')
 
 output_path = OUTPUT
 if os.path.exists(output_path):
