@@ -402,16 +402,17 @@ pdf.note_text('SA4: Missing data — TIRADS pre-op 63.2%, FNA cytology 90.4%, hi
 pdf.ln(2)
 
 # ===================== FIGURES =====================
-# Figure 1: Oncoplot
+# Figure 1: Mutation landscape (grouped bar + co-occurrence)
 pdf.add_page()
 pdf.section_title('Figures')
-pdf.subsection_title('Figure 1: Mutation Landscape')
-if os.path.exists('H:\\Q3 MNGOC\\oncoplot.png'):
-    pdf.image('H:\\Q3 MNGOC\\oncoplot.png', x=10, w=190)
+pdf.subsection_title('Figure 1: Mutation Landscape and Co-occurrence')
+if os.path.exists('H:\\Q3 MNGOC\\figure1_mutation.png'):
+    pdf.image('H:\\Q3 MNGOC\\figure1_mutation.png', x=10, w=190)
     pdf.ln(2)
-pdf.note_text('Mutation status (colored) for 114 patients (columns) across 4 gene categories (rows). '
-              'Recurrence and N+ status annotated at top. Bottom bar: mutation frequencies. '
-              'BRAF V600E 39.5%, BRAF other 1.8%, TERT 5.3%, TP53 1.8%.')
+pdf.note_text('Panel A: Mutation frequency (%) for each gene stratified by recurrence status. '
+              'Numbers above bars indicate mutation-positive/total per group. '
+              'p-values from Fisher\'s exact test. Panel B: Co-occurrence heatmap showing number of patients '
+              'with concurrent mutations in gene pairs. BRAF V600E 39.5%, TERT 5.3%, TP53 1.8% overall.')
 
 # Figure 2: Forest plot
 pdf.add_page()
